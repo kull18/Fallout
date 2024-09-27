@@ -1,0 +1,19 @@
+<div id="image">
+    <img src={{event.image}} alt="character" style="width: 100%; height: 100%;">
+</div>
+<div id="content">
+    <div id="name">
+        <p id="nameText">{{event.name}}</p>
+    </div>
+    <div id="description">
+        <div id="descriptionContainer" [ngClass]="{'expandido': expandir}">
+            <p id="descriptionText">{{event.description | slice: 0: expandir ? event.description.length : 124}}</p>
+            <span *ngIf="!expandir">...</span>
+        </div>
+    </div>
+    <div id="showMore">
+        <button (click)="toggleExpandir()">
+            {{expandir ? 'leer menos' : 'leer más'}}
+        </button>
+    </div>
+</div>

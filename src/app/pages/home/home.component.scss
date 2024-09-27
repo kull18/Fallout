@@ -1,0 +1,109 @@
+$font-apple: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$font-rubik: 'Rubik', sans-serif;
+
+@mixin font-size-family($size, $family) {
+    font-size: $size;
+    font-family: $family;
+}
+
+@mixin w-h($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+#main {
+    width: 100%;
+    height: 86%;
+}
+
+#ambitation {
+    @include w-h(100%, 26%);
+    display: flex;
+}
+
+#introduction {
+    @include w-h(60%, 100%);
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 5% 20% 75%;
+    padding: 50px 0 0 0; 
+    text-align: center;
+    margin: 20px;
+}
+
+#imageContainer {
+    @include w-h(40%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 0 0; 
+}
+
+#title {
+    @include font-size-family(calc(3rem - 20px), $font-apple);
+    color: #49775B;
+}
+
+#textTitle {
+    @include font-size-family(16px, $font-rubik);
+    line-height: 27px;
+}
+
+#imageAmbientation {
+    @include w-h(76%, 72%); 
+}
+
+#titleContainer {
+    grid-column: 2;
+    grid-row: 2;
+    margin-bottom: 10px;
+}
+
+#textContainer {
+    grid-column: 2;
+    grid-row: 3;
+    max-width: 600px; 
+    margin: 0 auto; 
+    line-height: 1.5; 
+    padding: 10px; 
+}
+
+.cards {
+    height: auto; 
+    @include w-h(100%, 75%);
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    @include w-h(18%, auto); 
+    border: transparent;
+    box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.47);
+    background-color: white;
+    transition: height 0.4s ease; 
+}
+
+.subtitle {
+    @include font-size-family(20px, $font-apple);
+    color: #49775B;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#eventTitle,
+#characterTitle {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#eventCards,
+#characterCards {
+    width: 100%;
+    height: auto; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

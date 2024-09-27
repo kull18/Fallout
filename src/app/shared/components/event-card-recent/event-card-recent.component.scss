@@ -1,0 +1,52 @@
+$font-apple: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+@mixin w-h($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin font-size-family($size, $family) {
+    font-size: $size;
+    font-family: $family;
+}
+
+#imageContent {
+    width: 30%;
+    height: 100%;
+    .imageEventRecent {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#contentInformation {
+    width: 70%;
+    height: 100%;
+    #descriptionContainer {
+        width: 100%;
+        height: 90%;
+
+        #description {
+            @include font-size-family(14px, $font-apple);
+            padding: 0 0 0 11px;
+            line-height: 22px;
+            text-align: justify;
+        }
+    }
+
+    #nameContainer {
+        width: 100%;
+        height: 20%;
+        #name {
+            @include font-size-family(16px, $font-apple);
+            padding:  0 0 0 15px;
+            text-align: justify; 
+        }
+    }
+}
+
+#extraContainer {
+    width: 95%;
+    height: 90%;
+}

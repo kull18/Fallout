@@ -1,0 +1,41 @@
+<app-header-home/>
+<app-vide-view/>
+<app-fallout />
+<div id="main">
+    <div id="ambitation">
+        <div id="introduction">
+            <div id="titleContainer">
+                <p id="title">Ambientacion de fallout</p>
+            </div>
+            <div id="textContainer">
+                <p id="textTitle">En el universo de Fallout, la historia se desarrolla en una línea temporal alternativa
+                    donde la guerra fría nunca cesó, y la humanidad, obsesionada con el progreso tecnológico, Sin
+                    embargo, esta era dorada terminó abruptamente con una guerra nuclear devastadora que aniquiló gran
+                    parte de la civilización. Las ciudades se convirtieron en ruinas radiactivas, y la flora y fauna
+                    mutaron en formas extrañas y peligrosas.</p>
+            </div>
+        </div>
+        <div id="imageContainer">
+            <img src="wp3804145.webp" id="imageAmbientation">
+        </div>
+    </div>
+    <div class="cards">
+        <div id="eventTitle">
+            <p class="subtitle">Eventos</p>
+        </div>
+        <div id="eventCards">
+            <div class="card" *ngFor="let event of events">
+                <app-card-event [event]="event"></app-card-event>
+            </div>
+        </div>
+        <div id="characterTitle">
+            <p class="subtitle">personajes importantes</p>
+        </div>
+        <div id="characterCards">
+            <div class="card" *ngFor="let character of characters">
+                <app-card-character [character]="character"></app-card-character>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer />

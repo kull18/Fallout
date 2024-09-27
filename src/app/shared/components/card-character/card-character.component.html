@@ -1,0 +1,20 @@
+<div id="image">
+    <img src="{{character.image}}" alt="character"
+        style="width: 56%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center;">
+</div>
+<div id="content">
+    <div id="name">
+        <p id="nameText">{{character.name}}</p>
+    </div>
+    <div id="description" [ngClass]="{'expandido': expandido}">
+        <div id="descriptionContainer">
+            <p id="descriptionText">{{character.description | slice: 0: expandido ? character.description.length : 124}}</p>
+            <span *ngIf="!expandido">...</span>
+        </div>
+    </div>
+</div>
+<div id="showMore">
+    <button (click)="toggleExpandir()">
+        {{expandido ? 'leer menos' : 'leer más'}}
+    </button>
+</div>

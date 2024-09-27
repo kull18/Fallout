@@ -1,0 +1,48 @@
+<app-header />
+<div id="main">
+    <div id="titleContainer">
+        <p id="newsText">
+            Novedades
+        </p>
+    </div>
+    <div id="promotion">
+        <div id="titlePromotionContainer">
+            <p id="promotionTitle">
+                La nueva serie de fallout
+            </p>
+        </div>
+        <div id="contentPromotion">
+            <img src="1358641.png" title="falloutSerie" id="imageFalloutSerie">
+        </div>
+        <div id="informationPromitionContainer">
+            <div id="informationPromotion">
+                <p id="promotionInformation">
+                    La serie de fallout trajo nuevos cambios al universo ademas de que extendio el universo conocido de
+                    fallout, siendo que ademas de atraer a nueva audiencia mostra que el universo del juego se puede
+                    extender a nuevos proyectos televisivos y generar nuevo lore.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="subtitleEventsRecent">
+        <p>eventos</p>
+    </div>
+    <div id="eventCards">
+        <app-event-card-recent class="eventCardRecent" *ngFor="let eventRecent of eventsRecents"
+            [eventRecent]="eventRecent" />
+    </div>
+    <div id="subtitleCharacters">
+        <p>personajes que se integran</p>
+    </div>
+    <div id="cardCharacters">
+        <app-card-character class="characterRecent" *ngFor="let  character of recentCharacters"
+            [character]="character" />
+    </div>
+    <div id="subtitleCanon">
+        <p>Afectaciones al canon</p>
+    </div>
+    <div id="canonCards">
+        <app-canon class="canonEventRecents" *ngFor="let enventRecent of canon" [canon]="enventRecent" />
+    </div>
+</div>
+<app-footer />

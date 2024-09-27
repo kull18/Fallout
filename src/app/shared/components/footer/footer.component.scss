@@ -1,0 +1,99 @@
+$font-apple: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+@mixin w-h($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin font-family-size($family, $size) {
+    font-family: $family;
+    font-size: $size;
+}
+
+footer {
+    background-color: #325886;
+    height: 9%; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 15px 0 0 11rem;
+}
+
+#socialMedia {
+    @include w-h(15%, auto);
+}
+
+#information, #latestNews, #usefulLinks {
+    @include w-h(25%, auto); 
+    padding: 15px 0;
+}
+
+#falloutTitle {
+    @include w-h(60px, 20px);
+}
+
+#text {
+    @include font-family-size($font-apple, 13.5px);
+    color: #FFFFFF;
+}
+
+#copyright {
+    @include font-family-size(sans-serif, 10px);
+    color: #FFFFFF;
+}
+
+#socialMediaList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;  
+    gap: 10px;              
+}
+
+#latestNews {
+    width: 15%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+}
+
+#socialMediaList li {
+    display: flex;
+    align-items: center; 
+}
+
+ a {
+    text-decoration: none;
+    color: white; 
+    font-family: $font-apple;
+    font-size: 13.5px; 
+    display: flex;
+    align-items: center;   
+}
+
+#socialMediaList a fa-icon {
+    margin-right: 4px;
+}
+
+#latestNews ul, #usefulLinks ul {
+    list-style-type: none; 
+    padding: 0; 
+    font-family: $font-apple;
+}
+
+#latestNews li, #usefulLinks li {
+    margin-bottom: 5px; 
+    font-family: $font-apple;
+    font-size: 10px;
+}
+
+#latestNews a, #usefulLinks a {
+    color: #FFFFFF; 
+    text-decoration: none;
+}
+
+#latestNews a:hover, #usefulLinks a:hover {
+    text-decoration: underline; 
+}

@@ -8,11 +8,12 @@ import { CardCharacterComponent } from "../../shared/components/card-character/c
 import { Character } from '../../models/character';
 import { CanonComponent } from "../../shared/components/canon/canon.component";
 import { Canon } from '../../models/Canon';
+import { CharacterDirectiveDirective } from '../../shared/directives/character-directive.directive';
 
 @Component({
   selector: 'app-news',
   standalone: true,
-  imports: [FooterComponent, HeaderComponent, EventCardRecentComponent, CommonModule, CardCharacterComponent, CanonComponent],
+  imports: [FooterComponent, HeaderComponent, EventCardRecentComponent, CommonModule, CardCharacterComponent, CanonComponent, CharacterDirectiveDirective],
   templateUrl: './news.component.html',
   styleUrl: './news.component.scss'
 })
@@ -39,7 +40,7 @@ export class NewsComponent {
     {
       image: 'th (2).jpeg',
       name: 'Maximus',
-      description: 'Maximus es un paladin de la hermandad del acero que durante la serie avanza  diferentes puestos hasta llegar a ser la mano derecha del elder ...',
+      description: 'Maximus es un paladin de la hermandad del acero que durante la serie avanza  diferentes puestos hasta llegar a ser la mano derecha del elder y lograr la derrota una derrota contra lo que queda de la rnc',
     }
   ];
   canon: Canon[] = [{

@@ -7,7 +7,7 @@ import { CommonModule, NgClass, NgIf } from '@angular/common';
   standalone: true,
   imports: [NgClass, NgIf, CommonModule],
   templateUrl: './card-character.component.html',
-  styleUrls: ['./card-character.component.scss'] // Corrected from styleUrl to styleUrls
+  styleUrls: ['./card-character.component.scss'] 
 })
 export class CardCharacterComponent {
   expandido: boolean = false; 
@@ -17,7 +17,7 @@ export class CardCharacterComponent {
     name: '',
     description: ''
   };
-
+  //toggleExpandir
   toggleExpandir() {
     this.expandido = !this.expandido; 
   }

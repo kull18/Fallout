@@ -15,12 +15,9 @@ export class CardEventComponent {
   toggleExpandir(): void {
     this.expandir = !this.expandir;
   }
-
-
   @Input() event: Event = {
     image: '',
     name: '',
     description: '',
-    extraDescription: ''
   }
 }

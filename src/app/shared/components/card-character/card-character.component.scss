@@ -14,7 +14,9 @@ $font-apple: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 }
 
 #content {
-    @include w-h(100%, auto);
+    width: 100%;
+    transition: max-height 0.4s ease; 
+    overflow: hidden; 
 }
 
 #name {
@@ -32,11 +34,6 @@ $font-apple: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     overflow: hidden;
 }
 
-// Max width
-#description.expandido {
-    max-width: auto;  // Cambia esto si es necesario
-}
-
 #descriptionContainer {
     width: 75%;
     height: auto;
@@ -47,8 +44,8 @@ $font-apple: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     justify-content: flex-start; 
 }
 
-#descriptionContainer.expandido {
-    max-height: 300px;  // Cambia este valor si es necesario
+#descriptionContainer {
+    max-height: 75%; 
 }
 
 #descriptionText {

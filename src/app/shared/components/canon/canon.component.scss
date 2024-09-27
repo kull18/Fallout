@@ -23,9 +23,10 @@ $font-apple: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     width: 100%;
     height: 50%;
     text-align: justify;
-    p {
+
+    #informationTextCanon {
         @include font-size-family(15.5px, $font-apple);
-        line-height: 22px;
+        line-height: 22px; 
     }
 }
 
@@ -35,9 +36,11 @@ $font-apple: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 20px 0 0; 
+    padding: 0 20px 0 0;
 
-}    #imageNews {
-        width: 50%;
-        height: 100%;
-    }
+}
+
+#imageNews {
+    width: 50%;
+    height: 100%;
+}
